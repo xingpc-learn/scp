@@ -1,0 +1,28 @@
+package com.xingpc.scp.rabbitmq.consumer;
+
+import com.rabbitmq.client.Channel;
+import com.xingpc.scp.rabbitmq.config.RabbitmqConfig;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+/**
+ * @Author: XingPc
+ * @Description: ${description}
+ * @Date: 2020/2/21 11:44
+ * @Version: 1.0
+ */
+@Component
+public class RabbitmqConsumer {
+    //监听队列消息
+    @RabbitListener(queues = {RabbitmqConfig.QUEUE_INFORM_SMS})
+    public void receive_sms(String msg, Message message, Channel channel){
+        System.out.println("receive message is:"+msg);
+    }
+
+    @RabbitListener(queues = {RabbitmqConfig.QUEUE_INFORM_EMAIL})
+    public void receive_email(String msg, Message message, Channel channel){
+        System.out.println("receive message is:"+msg);
+    }
+
+}

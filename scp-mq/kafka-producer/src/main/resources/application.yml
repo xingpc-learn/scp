@@ -1,0 +1,13 @@
+#公共配置
+server:
+  port: 7011
+
+spring:
+  kafka:
+    bootstrap-servers: 192.168.88.135:9092
+    producer:
+      retries: 1
+      batch-size: 16384
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer

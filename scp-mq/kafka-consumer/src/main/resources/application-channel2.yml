@@ -1,0 +1,7 @@
+#channel2配置
+server:
+  port: 17012
+
+config:
+  kafka:
+    group-id: channel2

@@ -1,0 +1,8 @@
+#channel3配置
+server:
+  port: 17013
+
+config:
+  kafka:
+    group-id: channel3
+

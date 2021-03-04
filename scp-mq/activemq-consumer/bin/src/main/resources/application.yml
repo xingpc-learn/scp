@@ -1,0 +1,15 @@
+server:
+  port: 80
+
+spring:
+  activemq:
+    #broker-url: tcp://47.106.116.228:61616
+    broker-url: failover:(tcp://192.168.88.135:51511,tcp://192.168.88.133:51512,tcp://192.168.88.136:51513,tcp://192.168.88.135:51514,tcp://192.168.88.133:51515,tcp://192.168.88.136:51516)
+    user: admin
+    password: admin
+    pool:
+      enabled: true
+    packages:
+      trust-all: true   # 如果使用ObjectMessage传输对象，必须要加上这个信任包，否则会报ClassNotFound异常
+  jms:
+    pub-sub-domain: true  # 启动主题消息

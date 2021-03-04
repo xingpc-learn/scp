@@ -6,7 +6,8 @@ target/
 .project
 .iml
 .classpath
-/.settings/
+.settings/
+bin/
 
 # Log file
 *.log

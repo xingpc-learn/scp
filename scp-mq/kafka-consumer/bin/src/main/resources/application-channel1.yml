@@ -1,7 +1,0 @@
-#channel1配置
-server:
-  port: 17011
-
-config:
-  kafka:
-    group-id: channel1
